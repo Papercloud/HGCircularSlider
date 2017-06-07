@@ -106,6 +106,11 @@ extension CircularSlider {
      */
     @discardableResult
     internal func drawThumb(withAngle angle: CGFloat, inContext context: CGContext) -> CGPoint {
+        
+        if self.showThumbShadow {
+            context.setShadow(offset: .zero, blur: 1)
+        }
+        
         let circle = Circle(origin: bounds.center, radius: self.radius)
         let thumbOrigin = CircularSliderHelper.endPoint(fromCircle: circle, angle: angle)
         let thumbCircle = Circle(origin: thumbOrigin, radius: thumbRadius)

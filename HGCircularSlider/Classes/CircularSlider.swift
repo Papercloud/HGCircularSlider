@@ -78,6 +78,14 @@ open class CircularSlider: UIControl {
      */
     @IBInspectable
     open var trackShadowColor: UIColor = .gray
+    
+    /**
+     * Show a shadow on the thumb
+     *
+     * The default value of this property is false.
+     */
+    @IBInspectable
+    open var showThumbShadow: Bool = false
 
     /**
      * The width of the thumb stroke line
